@@ -1,7 +1,7 @@
 from searchtweets import ResultStream, gen_rule_payload, load_credentials, collect_results
 
-premium_search_args = load_credentials("~/.twitter_keys.yaml",
-                                       yaml_key="search_tweets_premium",
+premium_search_args = load_credentials("twitter_keys.yaml",
+                                       yaml_key="search_tweets_api",
                                        env_overwrite=False)
 # testing with a sandbox account
 rule = gen_rule_payload("beyonce", results_per_call=100)
