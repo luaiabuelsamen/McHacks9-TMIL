@@ -14,19 +14,41 @@
         }
     </style>
 </head>
+
+
+
 <body>
 <div class = hero>
 <div class="card text-white bg-dark mb-3 mx-auto" style="width: 18rem;margin-top: 20vh">
     <div class="card-body">
         <h5 style="text-align: center" class="card-title">Risko</h5>
         <p class="card-text"></p>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Write any word" aria-label="Sizing example input"
-                   aria-describedby="inputGroup-sizing-default">
+        <div style="text-align: center">
+            <div style="text-align: center">
+                <form action="/display" method="POST" >
+                    <select id="coins" name="coin">
+                        <option value="BTC">BTC</option>
+                        <option value="ETH">ETH</option>
+                        <option value="ADA">ADA</option>
+                        <option value="CRO">CRO</option>
+                        <option value="SOL">SOL</option>
+                        <option value="LUNA">LUNA</option>
+                        <option value="BTC">NEAR</option>
+                        <option value="ETH">SHIB</option>
+                        <option value="ADA">DOGE</option>
+                        <option value="CRO">LTC</option>
+                        <option value="SOL">EOS</option>
+                        <option value="LUNA">SOL</option>
+                        <option value="LUNA">DOT</option>
+                      </select>
+                    <button name = "click" class="file_submit" type="submit" >Search</button>  
+                    {%if score%}
+                        <p class="card-text">Score is {{score}} </p>
+                    {%endif%}
+                </form>
+            </div>
         </div>
-        <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="button">Search</button>
-        </div>
+        <br>
     </div>
     <div style="text-align: center">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
